@@ -50,8 +50,3 @@ Assuming Drush and Provision are already installed, use drush to download:
 
     $ drush dl provision_git-6.x
 
-NOTE: There is a bad release that is preventing easy download of provision git.
-When installing with drush, you must explicitly add the version number, until
-issue [#2123203](http://drupal.org/node/2123203) is fixed. The 7.x branch
-release is old, do not use it.
-
