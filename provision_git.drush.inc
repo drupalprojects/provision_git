@@ -188,12 +188,12 @@ function drush_provision_git_commit() {
   $target = d()->name;
 
   //Generate commit message
-  $message = array();
-  $message[] = "Provision Git Commit: $target";
-  $message[] = str_repeat('=', strlen($message[0]));
-  if (drush_get_option('message')) {
-    $message[] = drush_get_option('message');
+  $message[] = drush_get_option('message');
+
+  if (empty($message)) {
+    $message[] = "Provision Git Commit: $target";
   }
+
   $message = implode("\n", $message);
 
   // Execute git commit
